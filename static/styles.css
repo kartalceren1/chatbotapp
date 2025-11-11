@@ -1,0 +1,212 @@
+/* ===== Body & Layout ===== */
+body {
+    font-size: 16px;           /* base font bigger */
+    color: #333;
+    background: #f0f2f5;
+    font-family: 'Open Sans', sans-serif;
+    margin: 20px;
+}
+
+#wrapper {
+    max-width: 800px;          /* wider wrapper */
+    margin: auto;
+}
+
+/* ===== Menu / Header ===== */
+#menu p {
+    font-size: 20px;           /* bigger header */
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+/* ===== Question Styling ===== */
+.question-container {
+    font-size: 20px;           /* larger question text */
+    font-weight: 600;
+    color: #222;
+    margin-bottom: 20px;
+}
+
+/* ===== Chatbox ===== */
+.chatbox {
+    max-height: 600px;          /* taller chatbox */
+    overflow-y: auto;
+    padding: 20px;
+    background: #f9f9f9;
+    border: 1px solid #ccc;
+    border-radius: 12px;
+    margin-bottom: 20px;
+}
+
+/* ===== Chat List ===== */
+.chat {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.chat li {
+    margin: 15px 0;             /* more spacing between messages */
+    display: flex;
+}
+
+.chat li.left {
+    justify-content: flex-start;
+}
+
+.chat li.right {
+    justify-content: flex-end;
+}
+
+/* ===== Chat Bubbles ===== */
+.chat li .chat-body {
+    max-width: 70%;
+    padding: 15px 20px;        /* bigger padding */
+    border-radius: 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    position: relative;
+    font-size: 16px;           /* larger chat text */
+    line-height: 1.5;
+}
+
+.chat li.left .chat-body {
+    background-color: #e5e5ea;
+    color: #333;
+}
+
+.chat li.right .chat-body {
+    background-color: #3c8dbc;
+    color: white;
+}
+
+/* ===== Bubble Headers ===== */
+.chat li .chat-body strong {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 700;
+    font-size: 16px;
+}
+
+/* ===== Bubble Arrows ===== */
+.chat li.left .chat-body::before {
+    content: '';
+    position: absolute;
+    top: 15px;
+    left: -10px;
+    width: 18px;
+    height: 18px;
+    background: #e5e5ea;
+    border-top: 1px solid #ccc;
+    border-left: 1px solid #ccc;
+    transform: rotate(-45deg);
+}
+
+.chat li.right .chat-body::before {
+    content: '';
+    position: absolute;
+    top: 15px;
+    right: -10px;
+    width: 18px;
+    height: 18px;
+    background: #3c8dbc;
+    border-top: 1px solid #367fa9;
+    border-right: 1px solid #367fa9;
+    transform: rotate(45deg);
+}
+
+/* ===== Input Form ===== */
+#chat-form {
+    display: flex;
+    align-items: stretch;       /* input and button same height */
+    gap: 10px;                  /* space between input and button */
+    margin-top: 15px;
+}
+
+#chat-form input[type="text"] {
+    flex-grow: 1;
+    padding: 16px 20px;         /* larger input */
+    font-size: 18px;            /* bigger text */
+    border: 1px solid #ccc;
+    border-radius: 12px;
+}
+
+#chat-form input[type="submit"] {
+    padding: 16px 24px;         /* bigger button */
+    font-size: 18px;            /* larger text */
+    border-radius: 12px;
+    background-color: #3c8dbc;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#chat-form input[type="submit"]:hover {
+    background-color: #367fa9;
+    transform: translateY(-1px);
+}
+
+#chat-form input[type="submit"]:active {
+    transform: translateY(0);
+}
+
+/* ===== Next Question Form ===== */
+#next-question-form {
+    margin-top: 15px;
+}
+
+#next-question-form input[type="submit"] {
+    padding: 16px 24px;
+    font-size: 18px;
+    border-radius: 12px;
+    background-color: #3c8dbc;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#next-question-form input[type="submit"]:hover {
+    background-color: #367fa9;
+    transform: translateY(-1px);
+}
+
+#next-question-form input[type="submit"]:active {
+    transform: translateY(0);
+}
+
+/* ===== Scrollbar Styling ===== */
+.chatbox::-webkit-scrollbar {
+    width: 8px;
+}
+
+.chatbox::-webkit-scrollbar-thumb {
+    background-color: rgba(0,0,0,0.2);
+    border-radius: 4px;
+}
+
+/* ===== Main Page Button Styling ===== */
+a > button {
+    padding: 16px 24px;         /* match chat buttons */
+    font-size: 18px;            /* bigger text */
+    border-radius: 12px;
+    background-color: #3c8dbc;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+a > button:hover {
+    background-color: #367fa9;
+    transform: translateY(-1px);
+}
+
+a > button:active {
+    transform: translateY(0);
+}
+
+/* Optional: remove default link styles */
+a {
+    text-decoration: none;
+}

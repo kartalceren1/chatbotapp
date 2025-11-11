@@ -1,22 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <title>Chat</title>
-        <meta name="description" />
-        <link rel="stylesheet" href="style.css" />
-    </head>
-    <body>
-        <div id="wrapper">
-            <div id="menu">
-                <p>Welcome, <b></b></p>
-            </div>
-            <div id="chatbox"></div>
-            <form name="message" action="">
-                <input name="usermsg" type="text" id="usermsg" />
-                <input name="submitmsg" type="submit" id="submitmsg" value="Send answer" />
-            </form>
+<head>
+    <meta charset="utf-8" />
+    <title>Chat</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div id="wrapper">
+        <a href="/"><button>Main Page</button></a>
+        <div id="menu">
+            <p>You are chatting with: <strong>{{ persona|capitalize }}</strong></p>
         </div>
 
-    </body>
+        <div class="question-container">
+            Question: <span id="question">{{ question }}</span>
+        </div>
+
+        <div class="chatbox">
+            <ul class="chat">
+                <li class="left">
+                    <div class="chat-body">
+                        <p>Answer the question above.</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Send answer form -->
+        <form id="chat-form">
+            <input type="hidden" name="persona" id="persona" value="{{ persona }}">
+            <input type="hidden" name="question" value="{{ question }}">
+            <input name="answer" type="text" id="answer" placeholder="Type your answer..." required />
+            <input type="submit" id="submitBtn" value="Submit" />
+        </form>
+
+        <br>
+        <a href="/chat?persona={{ persona }}"><button>Next Question</button></a>
+    </div>
+    <script src="{{ url_for('static', filename='script.js') }}" defer></script>
+</body>
 </html>

@@ -3,24 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <title>AI Interviewer</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='index.css') }}">
 </head>
 <body>
- <h1>Welcome to AI Interview Helper</h1>
-<h2>Sharpen your interview skills with personalised feedback.</h2>
-<label for="persona">To start, choose a persona: </label>
-
-<select name="persona" id="persona">
-  <option value="hr">HR → Focuses on teamwork, communication, and culture fit.</option>
-  <option value="tech">Tech → Evaluates technical problem-solving and clarity.</option>
-  <option value="manager">Manager → Assesses leadership, decision-making, and impact.</option>
-</select>
- <button id="startBtn">Start Interviewing</button>
- <script>
-    document.getElementById("startBtn").onclick = function () {
-    const selectedPersona = document.getElementById("persona").value;
-    window.location.href = `/chat?persona=${selectedPersona}`;
-};
-</script>
-<br>
+    <div class="container">
+        <h1>Welcome to AI Interview Helper</h1>
+        <h2>Sharpen your interview skills with personalised feedback.</h2>
+        <label for="persona">To start, choose a persona:</label>
+        <select name="persona" id="persona">
+          <option value="hr">HR → Focuses on teamwork, communication, and culture fit.</option>
+          <option value="tech">Tech → Evaluates technical problem-solving and clarity.</option>
+          <option value="manager">Manager → Assesses leadership, decision-making, and impact.</option>
+        </select>
+        <button id="startBtn">Start Interviewing</button>
+    </div>
+    <script>
+        document.getElementById("startBtn").onclick = function () {
+            const selectedPersona = document.getElementById("persona").value;
+            window.location.href = `/chat?persona=${selectedPersona}`;
+        };
+    </script>
 </body>
 </html>
