@@ -2,6 +2,11 @@
 
 A web application that provides mock interviews using AI. Users can choose a persona (HR, Tech, Manager), answer questions, and receive feedback and guidance in a natural, conversational way. Powered by OpenAI's GPT-4o-mini model.
 
+## Live Demo
+
+The app is deployed and running on Render! You can try it here:  
+
+[AI Interview Helper on Render](https://chatbotapp-dzwd.onrender.com)
 
 ## Features
 
