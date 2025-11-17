@@ -35,3 +35,20 @@ Ok, I want my feedback now
 
 
 The AI will provide a score, feedback paragraph, and practical tip.
+
+
+## Installation
+- **Clone the repository:**
+git clone https://github.com/kartalceren1/mtapplication.git
+
+cd chatbotapp
+
+- **Create and activate a virtual environment:**
+python3 -m venv venv
+
+source venv/bin/activate   # On Windows: venv\Scripts\activate
+
+- **Install the Python dependencies:**
+  
+pip install -r requirements.txt
+
