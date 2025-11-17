@@ -21,34 +21,35 @@ A web application that provides mock interviews using AI. Users can choose a per
 
 ## Usage
 
-Go to the homepage.
+1. Go to the homepage.
 
-Select a persona: HR, Tech, or Manager.
+2. Select a persona: HR, Tech, or Manager.
 
-Start the mock interview.
+3. Start the mock interview.
 
-Type your answer in the chat.
+4. Type your answer in the chat.
 
-When ready for formal feedback, type:
+5. When ready for formal feedback, type:
 
 Ok, I want my feedback now
 
-
-The AI will provide a score, feedback paragraph, and practical tip.
+6. The AI will provide a score, feedback paragraph, and practical tip.
 
 
 ## Installation
 - **Clone the repository:**
+- 
 git clone https://github.com/kartalceren1/mtapplication.git
 
 cd chatbotapp
 
 - **Create and activate a virtual environment:**
+- 
 python3 -m venv venv
 
 source venv/bin/activate   # On Windows: venv\Scripts\activate
 
 - **Install the Python dependencies:**
-  
+- 
 pip install -r requirements.txt
 
