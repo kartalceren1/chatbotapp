@@ -5,10 +5,22 @@ import os
 import requests
 import json
 from openai import OpenAI
+from flask_limiter import Limiter
+from flask_limiter.util import get_remote_address
+
 
 app = Flask(__name__)
+limiter = Limiter(
+    get_remote_address,
+    app=app,
+    default_limits=["100 per minute"] # 100 requests per minute
+)
 
 api_key = os.getenv("OPENAI_API_KEY")
+client = OpenAI(api_key=api_key)
+TEMPERATURE = 0.7
+MAX_TOKENS = 200
+MODEL = "gpt-4o-mini"
 
 persona_prompts = {
     "hr": """
@@ -98,33 +110,31 @@ def get_random_question(persona):
 
 
 @app.route("/evaluate", methods=["POST"])
+@limiter.limit("10 per minute")
 def evaluate():
     data = request.json
     persona = data.get("persona")
     question = data.get("question")
     answer = data.get("answer")
 
-    client = OpenAI(api_key=api_key)
-
     system_prompt = persona_prompts.get(persona, persona_prompts["hr"])
-
-    messages = [{"role": "system", "content": system_prompt}]
+    MESSAGES = [
+        {"role": "system", "content": system_prompt},
+        {
+            "role": "user",
+            "content": f"Question: {question}\nCandidate's Answer: {answer}"
+        }
+    ]
 
     response = client.chat.completions.create(
-        model="gpt-4o-mini",
-        messages=[
-            {"role": "system", "content": system_prompt},
-            {
-                "role": "user",
-                "content": f"Question: {question}\nCandidate's Answer: {answer}"
-            }
-        ],
-        temperature=0.7,
-        max_tokens=200
+        model=MODEL,
+        messages=MESSAGES,
+        temperature=TEMPERATURE,
+        max_tokens=MAX_TOKENS
     )
 
     reply = response.choices[0].message.content.strip()
-    messages.append({"role": "assistant", "content": reply})
+
     return jsonify({"reply": reply})
 
 

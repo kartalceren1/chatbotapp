@@ -1,6 +1,6 @@
 /* ===== Body & Layout ===== */
 body {
-    font-size: 16px;           /* base font bigger */
+    font-size: 16px;
     color: #333;
     background: #f0f2f5;
     font-family: 'Open Sans', sans-serif;
@@ -8,20 +8,20 @@ body {
 }
 
 #wrapper {
-    max-width: 800px;          /* wider wrapper */
+    max-width: 800px;
     margin: auto;
 }
 
 /* ===== Menu / Header ===== */
 #menu p {
-    font-size: 20px;           /* bigger header */
+    font-size: 20px;
     font-weight: 600;
     margin-bottom: 20px;
 }
 
 /* ===== Question Styling ===== */
 .question-container {
-    font-size: 20px;           /* larger question text */
+    font-size: 20px;
     font-weight: 600;
     color: #222;
     margin-bottom: 20px;
@@ -29,7 +29,7 @@ body {
 
 /* ===== Chatbox ===== */
 .chatbox {
-    max-height: 600px;          /* taller chatbox */
+    max-height: 600px;
     overflow-y: auto;
     padding: 20px;
     background: #f9f9f9;
@@ -46,7 +46,7 @@ body {
 }
 
 .chat li {
-    margin: 15px 0;             /* more spacing between messages */
+    margin: 15px 0;
     display: flex;
 }
 
@@ -61,11 +61,11 @@ body {
 /* ===== Chat Bubbles ===== */
 .chat li .chat-body {
     max-width: 70%;
-    padding: 15px 20px;        /* bigger padding */
+    padding: 15px 20px;
     border-radius: 20px;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     position: relative;
-    font-size: 16px;           /* larger chat text */
+    font-size: 16px;
     line-height: 1.5;
 }
 
@@ -117,22 +117,22 @@ body {
 /* ===== Input Form ===== */
 #chat-form {
     display: flex;
-    align-items: stretch;       /* input and button same height */
-    gap: 10px;                  /* space between input and button */
+    align-items: stretch;
+    gap: 10px;
     margin-top: 15px;
 }
 
 #chat-form input[type="text"] {
     flex-grow: 1;
-    padding: 16px 20px;         /* larger input */
-    font-size: 18px;            /* bigger text */
+    padding: 16px 20px;
+    font-size: 18px;
     border: 1px solid #ccc;
     border-radius: 12px;
 }
 
 #chat-form input[type="submit"] {
-    padding: 16px 24px;         /* bigger button */
-    font-size: 18px;            /* larger text */
+    padding: 16px 24px;
+    font-size: 18px;
     border-radius: 12px;
     background-color: #3c8dbc;
     color: white;
@@ -187,8 +187,8 @@ body {
 
 /* ===== Main Page Button Styling ===== */
 a > button {
-    padding: 16px 24px;         /* match chat buttons */
-    font-size: 18px;            /* bigger text */
+    padding: 16px 24px;
+    font-size: 18px;
     border-radius: 12px;
     background-color: #3c8dbc;
     color: white;

@@ -2,7 +2,8 @@
 body {
     font-family: 'Open Sans', sans-serif;
     background: linear-gradient(135deg, #f0f2f5, #d9e2ec);
-    color: #333;
+    background: #1b263b;
+    color: #f0f0f0;
     text-align: center;
     padding: 50px 20px;
     min-height: 100vh;
