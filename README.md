@@ -19,7 +19,7 @@ A web application that provides mock interviews using AI. Users can choose a per
 - **AI Integration**: OpenAI GPT-4o-mini  
 
 
-##Usage
+## Usage
 
 Go to the homepage.
 
