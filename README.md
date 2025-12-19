@@ -12,7 +12,7 @@ The app is deployed and running on Render! You can try it here:
 
 - **Multiple Personas**: HR, Tech, and Manager interview styles.  
 - **Interactive Chat**: AI responds naturally to answers and provides feedback on request.  
-- **Dynamic Questions**: Randomized questions from JSON files.  
+- **Dynamic Questions**: Randomised questions from JSON files.  
 - **Frontend**: Responsive chat interface with styled message bubbles.  
 - **Rate Limiting**: Protects the backend from excessive requests.  
 
